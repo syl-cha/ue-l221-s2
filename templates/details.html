@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>UE206 - Période 3 - Exercice 2</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../assets/libraries/magnific-popup.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+	</head>
+	
+<body>  
+		
+	<header id="header">
+          
+     	<div class="row align-center">
+             <img src="../assets/images/logo.png" alt="Voyage Tour" class="header-logo">
+             
+            <div class="header-society">
+                <h1 class="header-name">				            
+                    Voyage Tour
+			     </h1>
+                <p class="header-baseline">				            
+                    Voyagez en toute sérénité
+			    </p>
+            </div>
+            
+            <nav id="header-nav" class="column">
+                <ul class="row justify-end align-center">                   
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link" title="Mon compte">Mon compte</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link" title="Newsletter">Newsletter</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link header-nav-link-coordinates" title="Téléphonez-nous">
+                            <span>05.55.00.00.00</span>
+                            <span>Du lundi au samedi, de 9h à 21h</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- eof header-nav -->              
+		</div><!-- eof .row -->	
+        
+        <button class="js-main-nav-button main-nav-button button">Menu</button>
+        
+        <nav id="main-nav">
+            <button class="js-main-nav-button main-nav-button button">Fermer</button>
+            <ul class="row nowrap">                   
+                <li class="main-nav-item">
+                    <a href="#" class="main-nav-link" title="Séjours">Nos séjours</a>
+                </li>
+
+                <li class="main-nav-item">
+                    <a href="#" class="main-nav-link" title="Circuits">Nos circuits</a>
+                </li>   
+
+                <li class="main-nav-item">
+                    <a href="#" class="main-nav-link" title="Réservations">Bons plans</a>
+                </li>
+
+                <li class="main-nav-item">
+                    <a href="#" class="main-nav-link" title="Notre agence">Notre agence</a>
+                </li>             
+                <li class="main-nav-item">
+                    <a href="#" class="main-nav-link" title="Créez votre voyage">Créez votre voyage sur-mesure</a>
+                </li>                    
+            </ul>
+         </nav><!-- eof .main-nav -->	        
+	</header><!-- eof .header -->
+  		
+    <article class="fiche-details">
+        <header class="fiche-details-header">
+            <div class="row">
+                <h1 class="fiche-details-header-title">
+                    <span class="fiche-details-header-suptitle">Séjour</span>
+                    Chine
+                </h1>
+                <p class="fiche-details-header-excerpt">
+                    Découvrez les lieux incontournables à visiter grâce à des conseils d'initiés
+                </p>
+            </div>
+        </header>
+        
+        <div class="row">
+            <div class="fiche-details-sejour">
+            
+                <p class="fiche-details-sejour-excerpt">
+                    Bienvenue dans l'incroyable voyage au cœur de l'Empire du Milieu ! Notre site internet est votre porte d'entrée vers une expérience extraordinaire en Chine, un pays riche en histoire, en culture et en diversité. <br>Que vous soyez passionné par les anciennes dynasties, intrigué par les innovations technologiques modernes, ou simplement curieux de découvrir de nouvelles saveurs et traditions, nos experts sont là pour vous guider dans la planification de votre séjour. Préparez-vous à explorer des paysages à couper le souffle, à rencontrer des habitants chaleureux et à plonger dans une aventure qui vous marquera à jamais.
+                </p>
+
+                <h3>Découvrez nos séjours</h3>
+            
+                 <form class="fiche-details-metas">
+                    <fieldset class="fiche-details-metas-fieldset">
+                        <legend class="fiche-details-metas-legend">Configurez votre séjour</legend>
+                    
+                        <span class="fiche-details-meta">
+                            <label for="fiche-details-duration" class="fiche-details-metas-label">Durée</label>
+                            <select class="fiche-details-form-input" name="fiche-details-duration" id="fiche-details-duration" required>
+                                <option value="">Sélectionnez une durée</option>
+                                <option value="10j">10 jours</option>
+                                <option value="15j">15 jours</option>
+                                <option value="1m">1 mois</option>
+                            </select>
+                        </span>
+                        
+                        <span class="fiche-details-meta">
+                            <label for="fiche-details-cities" class="fiche-details-metas-label">Villes</label>
+                            <select class="fiche-details-form-input" name="fiche-details-cities" id="fiche-details-cities">
+                                <option value="">Sélectionnez une/des villes</option>
+                                <option value="cite-interdite">Cité interdite</option>
+                                <option value="zhujiajiao">Zhujiajiao</option>
+                                <option value="luoyang">Luoyang</option>
+                                <option value="longji">Longji</option>
+                            </select>
+                        </span>
+                        
+                        <input type="submit" class="button fiche-details-form-button" value="Rechercher">
+                    </fieldset>
+                </form><!-- eof .fiche-details-metas -->
+                
+                <p class="row">
+                    <span class="fiche-details-form-result">10jours</span>
+                    <span class="fiche-details-form-result">Luoyang</span>
+                    <span class="fiche-details-form-result">Zhujiajiao</span>
+                </p>
+                
+                <div class="row">
+                    <div class="fiche-details-sejour-details-container">
+                        <dl class="fiche-details-sejour-details">
+                            <dt>Jour 1</dt>
+                            <dd>Cité interdite</dd>
+
+                            <dt>Jour 2</dt>
+                            <dd>Grande muraille de chine.</dd>
+
+                            <dt>Jour 3</dt>
+                            <dd>Nouveau Palais d'été.</dd>
+
+                            <dt>Jour 4</dt>
+                            <dd>Huangshan</dd>
+
+                            <dt>Jour 5</dt>
+                            <dd>Parc national de Zhangjiajie</dd>
+
+                            <dt>Jour 6</dt>
+                            <dd>Zhujiajiao</dd>
+
+                            <dt>Jour 7</dt>
+                            <dd>Pingyao</dd>
+
+                            <dt>Jour 8</dt>
+                            <dd>Vieille ville de Luoyang</dd>
+
+                            <dt>Jour 9</dt>
+                            <dd>Les Pandas de Chengdu</dd>
+
+                            <dt>Jour 10</dt>
+                            <dd>Rizières en terrasses de Longji</dd>
+                        </dl>
+
+                    </div>
+                
+                    <div class="fiche-details-sejour-img">
+                        <img src="../assets/images/details/idee-sejour.jpeg" alt="">
+                        
+                        <div class="fiche-details-sejour-price">
+                            <p class="fiche-details-sejour-price-label">A partir de</p>
+                            <p class="fiche-details-sejour-price-label-final">
+                                1 850 € TTC
+                                <span>/personne</span>
+                            </p>
+                            <p class="fiche-details-sejour-price-label"> 
+                            10 jours, 8 nuits
+                            </p>
+                            <a class="button fiche-details-sejour-price-button" href="#" title="Réservez votre séjour">Réservez votre séjour</a>
+                         </div>
+                        
+                    </div>
+                
+                </div><!-- eof .row -->
+
+                <aside class="avis">
+                    <div class="avis-content">
+                        <div class="avis-global">
+                            4.8/5
+                            <span class="avis-global-number">sur 89 notes</span>
+                        </div>
+                        <div class="avis-details">
+
+                            <div class="avis-details-item">
+                                <span class="avis-details-item-label">Excellent</span>
+                                <span class="avis-details-item-barre-container">
+                                    <span class="avis-details-item-barre" style="width: 66%"></span>
+                                </span>
+                                <span class="avis-details-item-number">59</span>
+                            </div>
+
+                            <div class="avis-details-item">
+                                <span class="avis-details-item-label">Très bon</span>
+                                <span class="avis-details-item-barre-container">
+                                    <span class="avis-details-item-barre" style="width: 34%"></span>
+                                </span>
+                                <span class="avis-details-item-number">30</span>
+                            </div>
+
+                            <div class="avis-details-item">
+                                <span class="avis-details-item-label">Bon</span>
+                                <span class="avis-details-item-barre-container">
+                                    <span class="avis-details-item-barre" style="width: 0"></span>
+                                </span>
+                                <span class="avis-details-item-number">0</span>
+                            </div>
+
+                            <div class="avis-details-item">
+                                <span class="avis-details-item-label">Ordinaire</span>
+                                <span class="avis-details-item-barre-container">
+                                    <span class="avis-details-item-barre" style="width: 0"></span>
+                                </span>
+                                <span class="avis-details-item-number">0</span>
+                            </div>
+
+                            <div class="avis-details-item">
+                                <span class="avis-details-item-label">Mauvais</span>
+                                <span class="avis-details-item-barre-container">
+                                    <span class="avis-details-item-barre" style="width: 0"></span>
+                                </span>
+                                <span class="avis-details-item-number">0</span>
+                            </div>
+
+
+                        </div>
+
+                        <a class="button" href="#" title="Lire les avis">Lire les avis détaillés</a>
+
+                    </div><!-- eof .avis-content -->
+        
+                </aside><!-- eof .avis -->
+    
+            </div>
+        </div>
+        
+        <section class="fiche-details-images">
+        
+            <div class="fiche-details-images-col">
+                <img src="../assets/images/details/1.jpg" alt="">           
+            </div><!-- eof .fiche-details-images-col --> 
+
+            <div class="fiche-details-images-col">
+                <a class="js-gallery fiche-details-images-thumbnail is-active" href="../assets/images/details/1.jpg">
+                    <img src="../assets/images/details/1.jpg" alt=""> 
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/2.jpeg">
+                    <img src="../assets/images/details/2.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/3.jpeg">
+                    <img src="../assets/images/details/3.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/4.jpeg">
+                    <img src="../assets/images/details/4.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/1.jpg">
+                    <img src="../assets/images/details/1.jpg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/2.jpeg">
+                    <img src="../assets/images/details/2.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/3.jpeg">
+                    <img src="../assets/images/details/3.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/4.jpeg">
+                    <img src="../assets/images/details/4.jpeg" alt="">
+                </a>
+                <a class="js-gallery fiche-details-images-thumbnail" href="../assets/images/details/1.jpg">
+                    <img src="../assets/images/details/1.jpg" alt="">
+                </a>
+            </div><!-- eof .fiche-details-images-col -->
+
+        </section><!-- eof .fiches-images -->
+
+        <div class="fiche-details-legals">
+            <div class="row">
+                <div class="fiche-details-legals-col">
+                    <p class="fiche-details-legals-title">Ce prix comprend</p>
+                    <ul>
+                        <li>Le transport aérien France/Chine/France sur compagnie régulière.</li>
+                        <li>Les taxes, redevances et surcharge transporteur.</li>
+                        <li>L'hébergement en petit-déjeuner (selon la durée et la catégorie choisies).</li>
+                        <li>L'assistance de nos représentants sur place.</li>
+                    </ul>
+                </div>              
+                <div class="fiche-details-legals-col">
+                  <p class="fiche-details-legals-title">Ce prix ne comprend pas</p>
+                   <ul>
+                        <li>Les assurances.</li>
+                        <li>La location de voiture ou les transferts en option.</li>
+                        <li>Les suppléments en cas de modification de la formule de restauration.</li>
+                        <li>Les excursions et activités optionnelles.</li>
+                        <li>Les dépenses de nature personnelle.</li>
+                        <li>La taxe de séjour obligatoire à régler sur place.</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- eof .fiche-details-legals -->
+        
+        
+        <aside class="fiche-crosscontent">
+            <h2>Laissez-vous tenter par nos autres offres</h2>
+            <div class="row">                        
+                <div class="tips-col">
+                    <div class="tips-item">
+                        <img class="tips-img" alt="" src="../assets/images/vignettes/thailande.jpg">
+                        <div class="tips-metas">
+                            <p class="tips-metas-title">
+                            <span>Séjour</span>
+                            Thaïlande                         
+                            </p>
+                            <p class="tips-metas-price">
+                            <span>A partir de</span>
+                            850€
+                            </p>
+                        </div><!-- eof .tips-metas -->
+                        <a class="tips-link" href="#">
+                            <span>Découvrir l'offre</span>
+                        </a>
+                    </div><!-- eof .tips-item -->
+                </div><!-- eof .tips-col -->               
+                <div class="tips-col">
+                    <div class="tips-item">
+                        <img class="tips-img" alt="" src="../assets/images/vignettes/grece.jpg">
+                        <div class="tips-metas">
+                            <p class="tips-metas-title">
+                            <span>Circuit</span>
+                            Grèce                            
+                            </p>
+                            <p class="tips-metas-price">
+                            <span>A partir de</span>
+                            850€
+                            </p>
+                        </div><!-- eof .tips-metas -->
+                        <a class="tips-link" href="#">
+                        <span>Découvrir l'offre</span>
+                        </a>
+                    </div><!-- eof .tips-item -->
+                </div><!-- eof .tips-col -->
+                <div class="tips-col">
+                    <div class="tips-item">
+                        <img class="tips-img" alt="" src="../assets/images/vignettes/canada.jpg">
+                        <div class="tips-metas">
+                            <p class="tips-metas-title">
+                            <span>Circuit</span>
+                            Canada                            
+                            </p>
+                            <p class="tips-metas-price">
+                            <span>A partir de</span>
+                            850€
+                            </p>
+                        </div><!-- eof .tips-metas -->
+                        <a class="tips-link" href="#">
+                        <span>Découvrir l'offre</span>
+                        </a>
+                    </div><!-- eof .tips-item -->
+                </div><!-- eof .tips-col -->            
+            </div><!-- eof .row -->
+
+        </aside><!-- eof .fiche-crosscontent -->
+    </article>
+    
+     
+       		
+     
+    <footer id="footer">
+        <div class="row">
+        
+            <div class="footer-stats">
+            <div class="footer-stats-item">
+                <div class="footer-stats-item-number">150</div>
+                <p class="footer-stats-item-title">Agences pour vous accompagner</p>
+            </div>
+            <div class="footer-stats-item">
+                <div class="footer-stats-item-number">1 100</div>
+                <p class="footer-stats-item-title">Spécialistes à votre service</p>
+            </div>
+            <div class="footer-stats-item">
+                <div class="footer-stats-item-number">8 000</div>
+                <p class="footer-stats-item-title">Séjours, circuits et locations</p>
+            </div>
+            <div class="footer-stats-item">
+                <div class="footer-stats-item-number">650 000</div>
+                <p class="footer-stats-item-title">Hôtels dans notre catalogue</p>
+            </div>
+            <div class="footer-stats-item">
+                <div class="footer-stats-item-number">200</div>
+                <p class="footer-stats-item-title">Compagnies aériennes partenaires</p>
+            </div>            
+        </div><!-- eof .footer-stats -->
+              
+            <div class="footer-social"> 
+            
+            <p class="footer-social-title">Suivez-nous sur les réseaux sociaux</p> 
+            
+            <ul class="footer-social-list"> 
+                <li> 
+                    <a class="footer-social-icon icon-facebook" href="#" target="_blank" rel="nofollow" title="Nous suivre sur Facebook"> Facebook 
+                    </a> 
+                </li> 
+                <li> 
+                    <a class="footer-social-icon icon-instagram" href="#" target="_blank" rel="nofollow" title="Nous suivre sur Instagram"> Instagram 
+                    </a> 
+                </li> 
+                <li> 
+                    <a class="footer-social-icon icon-youtube" href="#" target="_blank" rel="nofollow" title="Nous suivre sur Youtube"> Youtube 
+                    </a> 
+                </li> 
+            </ul>
+        </div><!-- eof .footer-social -->
+        </div><!-- eof .row -->
+        
+        
+    </footer><!-- eof #footer -->
+    
+    <div class="footer-mentions">
+        Séjours, circuits, week-ends: Prix TTC, à partir de, sous réserve de disponibilité, base chambre double. Vols: Prix TTC à partir de, sous réserve de disponibilité, vol Aller/Retour ou Aller simple selon demande. Ces tarifs n'incluent pas les frais de dossier. Locations : prix par location pour la durée totale du séjour. Ces tarifs n'incluent pas les frais de dossier. hôtels : Prix TTC à partir de, par nuit, base chambre double. 
+    </div>
+    
+    <script src="../assets/libraries/jquery-3.7.1.min.js"></script>
+    <script src="../assets/libraries/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+</body>
+</html>
