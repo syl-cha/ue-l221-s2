@@ -1104,37 +1104,4 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.footer-mentions-display-zone {
-  max-width: 75rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden; /* pour cacher ce qui est en dehors de la zone */
-  padding: 0;
-  position: relative;
-}
-
-.footer-mentions-message {
-  color: var(--white-color);
-  font-size: 0.9rem;
-  font-style: italic;
-  display: inline-block;
-  white-space: nowrap;
-  padding-left: 100%; /* on pousse à droite pour cacher l'élément */
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 0;
-  animation: move 30s linear infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
 }
