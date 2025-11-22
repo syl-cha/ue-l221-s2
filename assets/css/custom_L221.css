@@ -1,3 +1,27 @@
+/***** Animation rotation logo pour laisser les textes apparaître *****/
+.header-logo {
+  width: 120px;
+  animation: rotation-logo 1.8s ease forwards;
+  transform-origin: center;
+}
+
+.header-society {
+  opacity: 0;
+  animation: apparition-texte 1.4s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Animation du décalage et de la rotation du logo */
+@keyframes rotation-logo {
+  0% {
+    transform: translateX(120px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+
+
 /****** Animation de parallaxe pour le hero header *****/
 .section-search {
   animation: parallaxe linear both;
