@@ -512,7 +512,10 @@ pour afficher une face toutes les 5 secondes */
   }
 }
 
-/* Animation flip cards pour les bon plans */
+/* 
+   Animation flip cards pour les bon plans 
+   Source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+*/
 
 .tips-col {
   background-color: transparent;
@@ -528,7 +531,7 @@ pour afficher une face toutes les 5 secondes */
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  overflow: visible !important; /* overflow: hidden; incompatible avec 3D */
+  overflow: visible !important; /* overflow: hidden; incompatible avec 3D ! (aide IA) */
 }
 
 .tips-col:hover .tips-item {
@@ -546,7 +549,6 @@ pour afficher une face toutes les 5 secondes */
 }
 
 .tips-item-front {
-  position: relative;
   background-color: var(--white-color);
   z-index: 2;
   transform: rotateY(0deg);
@@ -555,13 +557,8 @@ pour afficher une face toutes les 5 secondes */
 .tips-item-back {
   position: absolute;
   background-color: var(--black-color);
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.tips-item-back .tips-link {
-  position: relative;
-  opacity: 1;
-  background-color: transparent;
 }
