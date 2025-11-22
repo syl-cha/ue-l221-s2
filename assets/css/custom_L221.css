@@ -557,8 +557,102 @@ pour afficher une face toutes les 5 secondes */
 .tips-item-back {
   position: absolute;
   background-color: var(--black-color);
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 
+  Animation sur les boutons de navigation
+*/
+
+
+.main-nav-item {
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  transition: box-shadow 0.6s ease-in-out;
+}
+
+.main-nav-item-scene3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.main-nav-item:hover {
+  box-shadow: 
+    /* pour mémo : x | y | flou | étalement | couleur */
+    0 -5px 30px -10px var(--secondary-color), /* en haut du bouton*/
+    0 5px 30px -10px var(--secondary-color); /*en bas */
+}
+
+.main-nav-item:hover .main-nav-item-scene3d{
+  transform: rotateX(180deg);
+}
+
+.main-nav-item-one,
+.main-nav-item-two {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.main-nav-item-one {
+  position: relative;
+  padding: 0.25rem 1.25rem;
+  color: var(--white-color);
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transform: rotateX(0deg);
+}
+
+.main-nav-item-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateX(180deg);
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+.main-nav-item-two .main-nav-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.main-nav-item-two .main-nav-link:hover {
+  background-color: transparent;
+  color: var(--white-color);
+}
+
+.main-nav-item:last-child .main-nav-item-one {
+  color: var(--black-color);
+}
+
+.main-nav-item:last-child .main-nav-item-two {
+  color: var(--white-color);
+}
+
+.main-nav-item:last-child .main-nav-item-two .main-nav-link {
+  color: var(--white-color) !important;
+  transition: none !important;
 }
