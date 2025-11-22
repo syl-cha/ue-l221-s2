@@ -363,12 +363,12 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-.tips-img {
+/* .tips-img {
   transition: transform 0.2s;
 }
 .tips-item:hover .tips-img {
   transform: scale(1.2);
-}
+} */
 .tips-metas {
   position: absolute;
   bottom: 0;
@@ -408,7 +408,7 @@ a:hover {
   text-transform: uppercase;
   color: var(--white-color);
 }
-.tips-link {
+/* .tips-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,10 +420,10 @@ a:hover {
   height: 100%;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.75);
-}
-.tips-item:hover .tips-link {
+} */
+/* .tips-item:hover .tips-link {
   opacity: 1;
-}
+} */
 .tips-link span {
   background-color: var(--primary-color);
   font-size: 1.1rem;
