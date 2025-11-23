@@ -33,21 +33,27 @@
   }
 }
 
-
 /****** Animation de parallaxe pour le hero header *****/
 .section-search {
-  animation: parallaxe linear both;
-  animation-timeline: scroll();
-  animation-range: entry 0% exit 100%;
+  background-attachment: fixed;
+  background-position: center 0;
+  background-size: cover;
 }
-
+@supports (animation-timeline: view()) {
+  .section-search {
+    background-attachment: scroll;
+    animation: parallaxe linear both;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+}
 @keyframes parallaxe {
   from {
     background-position: center 0;
   }
 
   to {
-    background-position: center -300px;
+    background-position: center 200px;
   }
 }
 
@@ -101,7 +107,8 @@
     transform: rotate(-0.5deg);
   }
 
-  10%, 100% {
+  10%,
+  100% {
     transform: rotate(0deg);
   }
 }
@@ -188,12 +195,12 @@ pour afficher une face toutes les 5 secondes */
   display: flex;
   align-items: center; /* Centre verticalement le prisme */
   justify-content: center; /* Centre horizontalement */
-  overflow: hidden
+  overflow: hidden;
 }
 
 /* Distance du centre */
 :root {
---face-width: 300px; 
+  --face-width: 300px;
   --radius: 210px;
 }
 
@@ -201,7 +208,7 @@ pour afficher une face toutes les 5 secondes */
 .prisme-conteneur {
   perspective: 1000px;
   display: flex;
-width: var(--face-width); /* Le conteneur fait la taille d'une face */
+  width: var(--face-width); /* Le conteneur fait la taille d'une face */
   height: 150px;
   position: relative;
   margin: 0 auto;
@@ -287,25 +294,46 @@ width: var(--face-width); /* Le conteneur fait la taille d'une face */
    - ~16% face fixe, ~4% de rotation vers la suivante */
 @keyframes rotation-prisme {
   /* Face 1 (0deg) */
-  0%, 15%   { transform: translateZ(calc(var(--radius) * -1)) rotateY(0deg); }
-  
+  0%,
+  15% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(0deg);
+  }
+
   /* Rotation vers Face 2 (-72deg) */
-  20%, 35%  { transform: translateZ(calc(var(--radius) * -1)) rotateY(-72deg); }
-  
+  20%,
+  35% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(-72deg);
+  }
+
   /* Rotation vers Face 3 (-144deg) */
-  40%, 55%  { transform: translateZ(calc(var(--radius) * -1)) rotateY(-144deg); }
-  
+  40%,
+  55% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(-144deg);
+  }
+
   /* Rotation vers Face 4 (-216deg) */
-  60%, 75%  { transform: translateZ(calc(var(--radius) * -1)) rotateY(-216deg); }
-  
+  60%,
+  75% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(-216deg);
+  }
+
   /* Rotation vers Face 5 (-288deg) */
-  80%, 95%  { transform: translateZ(calc(var(--radius) * -1)) rotateY(-288deg); }
-  
+  80%,
+  95% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(-288deg);
+  }
+
   /* Retour Face 1 (-360deg = 0deg) */
-  100%      { transform: translateZ(calc(var(--radius) * -1)) rotateY(-360deg); }
+  100% {
+    transform: translateZ(calc(var(--radius) * -1)) rotateY(-360deg);
+  }
 }
 
-.un, .deux, .trois, .quatre, .cinq {
+.un,
+.deux,
+.trois,
+.quatre,
+.cinq {
   animation: none;
 }
 
@@ -495,7 +523,6 @@ width: var(--face-width); /* Le conteneur fait la taille d'une face */
   Animation sur les boutons de navigation
 */
 
-
 .main-nav-item {
   perspective: 1000px;
   position: relative;
@@ -515,12 +542,12 @@ width: var(--face-width); /* Le conteneur fait la taille d'une face */
 
 .main-nav-item:hover {
   box-shadow: 
-    /* pour mémo : x | y | flou | étalement | couleur */
-    0 -5px 30px -10px var(--secondary-color), /* en haut du bouton*/
-    0 5px 30px -10px var(--secondary-color); /*en bas */
+    /* pour mémo : x | y | flou | étalement | couleur */ 0 -5px 30px -10px
+      var(--secondary-color),
+    /* en haut du bouton*/ 0 5px 30px -10px var(--secondary-color); /*en bas */
 }
 
-.main-nav-item:hover .main-nav-item-scene3d{
+.main-nav-item:hover .main-nav-item-scene3d {
   transform: rotateX(180deg);
 }
 
