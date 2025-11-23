@@ -126,9 +126,10 @@
 }
 
 .ideas-col {
+  transform: translateY(100px);
   animation: cascade 0.6s ease-out both;
   animation-timeline: view(); /* en fonction du scroll */
-  animation-range: entry 0% exit -350%;
+  animation-range: entry 0% cover 50%;
 }
 
 /* Apparition en cascade un délai */
@@ -175,6 +176,54 @@
 
   to {
     transform: translateY(0);
+  }
+}
+
+/* Fallback pour les navigateurs incompatibles (Firefox, Safari) */
+
+/* Si animation-timeline n'est pas supporté, on remplace l'animation par une animation temporelle */
+@supports not (animation-timeline: auto) {
+  .ideas-col {
+    animation: cascade 0.6s ease-out forwards;
+    animation-timeline: auto;
+    animation-range: normal;
+  }
+
+  /* Délais de cascade + délai initial de 3 secondes pour laisser l'utilisateur parcourir la page */
+  .ideas-col:nth-child(1) {
+    animation-delay: 3s;
+  }
+
+  .ideas-col:nth-child(2) {
+    animation-delay: 3.1s;
+  }
+
+  .ideas-col:nth-child(3) {
+    animation-delay: 3.2s;
+  }
+
+  .ideas-col:nth-child(4) {
+    animation-delay: 3.3s;
+  }
+
+  .ideas-col:nth-child(5) {
+    animation-delay: 3.4s;
+  }
+
+  .ideas-col:nth-child(6) {
+    animation-delay: 3.5s;
+  }
+
+  .ideas-col:nth-child(7) {
+    animation-delay: 3.6s;
+  }
+
+  .ideas-col:nth-child(8) {
+    animation-delay: 3.7s;
+  }
+
+  .ideas-col:nth-child(9) {
+    animation-delay: 3.8s;
   }
 }
 
