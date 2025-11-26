@@ -1,0 +1,19 @@
+.non-visible {
+  display: none !important;
+}
+
+.devis-video-button {
+  padding: 0.5rem;
+  /* TODO : styliser les boutons */
+}
+
+.devis-video-player {
+  /* TODO : à reprendre */
+  height: 300;
+  width: auto;
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
