@@ -440,46 +440,73 @@
     <!-- eof .section-circuits -->
 
     <section class="form_UE_L211">
-      <h1>Devis</h1>
-      <p>
-        Envie d'ailleurs ? Laissez-nous vos coordonnées et un aperçu de vos envies. Nous vous
-        répondrons dans les meilleurs délais
-      </p>
-      <div id="devis-video"></div>
-      <form action="#" method="POST">
+      <h2>Devis</h2>
+      <div class="form221 row nowrap">
+        <div class="form_section_1">
+          <p>
+            Envie d'ailleurs ? Laissez-nous vos coordonnées et un aperçu de vos envies. Nous vous
+            répondrons dans les meilleurs délais.
+          </p>
+          <div id="devis-video"></div>
+        </div>
+      <form action="#" method="POST" class="form_211">
         <fieldset id="devis-form-coordonnees">
           <legend>Coordonnées</legend>
-          <label for="devis-nom">Nom</label>
-          <input type="text" name="devis-nom" id="devis-nom" required />
-          <label for="devis-prenom">Prénom</label>
-          <input type="text" name="devis-prenom" id="devis-prenom" required />
-          <label for="devis-dob">Date de naissance</label>
-          <input type="date" name="devis-dob" id="devis-dob" required />
-          <label for="devis-email">Email</label>
-          <input type="email" name="devis-email" id="devis-email" required />
-          <label for="devis-telephone">Téléphone</label>
-          <input type="tel" name="devis-telephone" id="devis-telephone" />
-          <input type="checkbox" name="devis-consentement-rgp" id="devis-consentement-rgp" value="1" required />
-          <label for="devis-consentement-rgp">
-            J'ai pris connaissance des <a href="#" target="_blank">CGV</a>
-          </label>
+          <div class="form-row row-2">
+            <div class="form-group">
+              <label for="devis-nom">Nom : *</label>
+              <input type="text" name="devis-nom" id="devis-nom" required />
+            </div>
+            <div class="form-group">
+              <label for="devis-prenom">Prénom : *</label>
+              <input type="text" name="devis-prenom" id="devis-prenom" required />
+            </div>
+          </div>
+          <div class="form-row row-3">
+            <div class="form-group">
+              <label for="devis-email">Email : *</label>
+              <input type="email" name="devis-email" id="devis-email" required />
+            </div>
+            <div class="form-group">
+              <label for="devis-dob">Date de naissance : *</label>
+              <input type="date" name="devis-dob" id="devis-dob" required />
+            </div>
+            <div class="form-group">
+              <label for="devis-telephone">Téléphone (optionnel) :</label>
+              <input type="tel" name="devis-telephone" id="devis-telephone" />
+            </div>
+          </div>
+          <div class="form-row row-1 consentement">
+            <input type="checkbox" name="devis-consentement-rgp" id="devis-consentement-rgp" value="1" required />
+            <label for="devis-consentement-rgp">
+              J'ai pris connaissance des <a href="#" target="_blank">CGV</a>
+            </label>
+          </div>
         </fieldset>
         <fieldset id="form-voyage">
           <legend>Voyage</legend>
-          <select name="devis-destination" id="devis-destination">
-            <option value="">--Choisir une destination--</option>
-            <option value="asie">Asie</option>
-            <option value="europe">Europe</option>
-            <option value="amerique-sud">Amérique du Sud</option>
-            <option value="amerique-centre">Amérique centrale</option>
-            <option value="amerique-nord">Amérique du Nord</option>
-            <option value="oceanie">Océanie</option>
-          </select>
-          <label for="devis-budget" min="300">Budget</label>
-          <input type="number" name="devis-budget" id="devis-budget" />
+          <div class="form-row row-2">
+            <div class="form-group">
+              <label for="devis-destination">Destination *</label>
+              <select name="devis-destination" id="devis-destination">
+                <option value=""> -- Choisir une destination -- </option>
+                <option value="asie">Asie</option>
+                <option value="europe">Europe</option>
+                <option value="amerique-sud">Amérique du Sud</option>
+                <option value="amerique-centre">Amérique centrale</option>
+                <option value="amerique-nord">Amérique du Nord</option>
+                <option value="oceanie">Océanie</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="devis-budget">Budget *</label>
+              <input type="number" name="devis-budget" id="devis-budget" />
+            </div>
+          </div>
         </fieldset>
-        <input type="submit" value="Envoyer" id="devis-bouton-envoyer" />
+        <input type="submit" value="Envoyer" id="devis-bouton-envoyer"/>
       </form>
+      </div>
     </section>
     <!-- eof .form_UE_L211 -->
 

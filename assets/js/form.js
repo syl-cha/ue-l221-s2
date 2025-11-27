@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // prêt à injecter du code dans le DOM
   const videoZoneElt = document.getElementById('devis-video');
   if (videoZoneElt) {
-    const btn1 = createButtonElt('bouton1');
-    const btn2 = createButtonElt('bouton2');
+    const btn1 = createButtonElt('Découvrez nos services');
+    const btn2 = createButtonElt('Fermer la vidéo');
     btn2.classList.add('non-visible'); // le bouton 2 n'est pas visible au départ
 
     btn1.addEventListener('click', () => {
@@ -18,6 +18,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       videoElt.autoplay = true;
       videoElt.classList.add('devis-video-player');
       videoZoneElt.appendChild(videoElt);
+      requestAnimationFrame(() => {
+        videoElt.classList.add('visible');
+      });
       toggleButton();
     });
 
@@ -25,7 +28,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const videoElt = document.getElementById('devis-video-player');
       if (videoElt) {
         videoElt.pause();
-        videoElt.remove();
+          videoElt.remove();
       }
       toggleButton();
     });
