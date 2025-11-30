@@ -82,6 +82,15 @@
   }
 }
 
+/* Effet de focus sur les champs du formulaire */
+.form_211 input:focus,
+.form_211 select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
 
 
 /* Style de la section DEVIS + Formulaire */
