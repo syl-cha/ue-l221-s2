@@ -6,6 +6,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const btn2 = createButtonElt('Fermer la vidéo');
     btn2.classList.add('non-visible'); // le bouton 2 n'est pas visible au départ
 
+    // container pour insérer la vidéo
+    const videoContainer = document.createElement('div');
+    videoContainer.classList.add('video-placeholder');
+
     btn1.addEventListener('click', () => {
       // recherche : dummy video links for web development
       // source : https://gist.github.com/deepakpk009/99fd994da714996b296f11c3c371d5ee
@@ -17,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       videoElt.controls = true;
       videoElt.autoplay = true;
       videoElt.classList.add('devis-video-player');
-      videoZoneElt.appendChild(videoElt);
+      videoContainer.appendChild(videoElt);
       requestAnimationFrame(() => {
         videoElt.classList.add('visible');
       });
@@ -40,8 +44,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       btn2.classList.toggle('non-visible');
     }
 
+    // insertion des éléments dans la zone réservée
     videoZoneElt.appendChild(btn1);
     videoZoneElt.appendChild(btn2);
+    videoZoneElt.appendChild(videoContainer);
   }
 });
 
