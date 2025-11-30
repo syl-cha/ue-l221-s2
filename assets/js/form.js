@@ -29,12 +29,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     btn2.addEventListener('click', () => {
-      const videoElt = document.getElementById('devis-video-player');
-      if (videoElt) {
-        videoElt.pause();
-          videoElt.remove();
-      }
-      toggleButton();
+    const videoElt = document.getElementById('devis-video-player');
+    
+        if (videoElt) {
+            videoElt.pause(); 
+            videoElt.classList.remove('visible'); 
+            const TRANSITION_DURATION = 200;
+            // on attend que l'animation soit terminée avant de nettoyer et d'échanger les boutons
+            setTimeout(() => {
+                // Suppression de l'élément vidéo après fade
+                videoElt.remove(); 
+                toggleButton(); 
+            }, TRANSITION_DURATION);
+
+        } else {
+            toggleButton();
+        }
     });
 
     function toggleButton() {
