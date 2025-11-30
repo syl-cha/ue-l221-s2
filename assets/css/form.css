@@ -1,13 +1,24 @@
 .non-visible {
-  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  max-height: 0; 
+  padding: 0 1.25rem !important;
+  margin-bottom: 0 !important;
+  visibility: hidden;
 }
 
 #devis-video {
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .devis-video-button {
+  /* Transitions pour fade */
+  opacity: 1; 
+  max-width: 15rem;
+  max-height: 5rem;
+  transition: opacity 0.6s ease, max-height 0.6s ease, padding 0.6s ease, margin-bottom 0.6s ease, transform 0.3s ease; 
   color: var(--white-color);
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
@@ -19,22 +30,24 @@
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
+  visibility: visible;
 }
 
 .devis-video-button:before {
   display: inline-block;
   margin-right: 1rem;
+  transition: transform 0.3s ease;
 }
 .devis-video-button:hover {
   color: var(--primary-color);
   background-color: var(--white-color);
 }
 .devis-video-button:hover:before {
-  transform: translateX(0.25rem) scale(1.5);
+  transform: scale(1.5);
 }
 
 .video-placeholder {
-  height: 300px;       /* Hauteur exacte de la future vidéo */
+  height: 300px;
   width: 100%;        
   display: flex;
   justify-content: center;
@@ -300,7 +313,7 @@
   100% { transform: scale(1) rotate(0deg); }
 }
 
-/* COCHER : apparation douce */
+/* Cocher : apparation douce */
 .form-row.consentement input[type="checkbox"]::after {
   content: "";
   position: absolute;
