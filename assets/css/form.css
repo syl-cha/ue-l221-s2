@@ -72,13 +72,13 @@
 /* Animation respiration */
 @keyframes formPulse {
   0% {
-    box-shadow: 0 0 0px rgba(255, 255, 255, 0.529);
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.529);
   }
   50% {
-    box-shadow: 0 0 20px rgba(230, 230, 230, 0.75);
+    box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.75);
   }
   100% {
-    box-shadow: 0 0 0px rgba(242, 242, 242, 0.4);
+    box-shadow: 0 0 0 0px rgba(242, 242, 242, 0.4);
   }
 }
 
