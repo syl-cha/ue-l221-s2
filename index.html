@@ -1,603 +1,577 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>UE L201 - Semaine 4</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/custom_L221.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
-  </head>
 
-  <body>
-    <header id="header">
-      <div class="row align-center">
-        <img src="assets/images/logo.png" alt="Voyage Tour" class="header-logo animation" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>UE L201 - Semaine 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/custom_L221.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
+</head>
 
-        <div class="header-society">
-          <h1 class="header-name">Voyage Tour</h1>
-          <p class="header-baseline">Voyagez en toute sérénité</p>
-        </div>
+<body>
+  <header id="header">
+    <!--- On change les row en layout-row pour que Bootstrap ne casse pas la page entière, mais seulement le form --->
+    <div class="layout-row align-center">
+      <img src="assets/images/logo.png" alt="Voyage Tour" class="header-logo animation" />
 
-        <nav id="header-nav" class="column">
-          <ul class="row justify-end align-center">
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-link" title="Mon compte">Mon compte</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-link" title="Newsletter">Newsletter</a>
-            </li>
-            <li class="header-nav-item">
-              <a
-                href="#"
-                class="header-nav-link header-nav-link-coordinates"
-                title="Téléphonez-nous"
-              >
-                <span>05.55.00.00.00</span>
-                <span>Du lundi au samedi, de 9h à 21h</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- eof header-nav -->
+      <div class="header-society">
+        <h1 class="header-name">Voyage Tour</h1>
+        <p class="header-baseline">Voyagez en toute sérénité</p>
       </div>
-      <!-- eof .row -->
 
-      <button class="js-main-nav-button main-nav-button button">Menu</button>
-
-      <nav id="main-nav">
-        <button class="js-main-nav-button main-nav-button button">Fermer</button>
-        <ul class="row nowrap">
-          <li class="main-nav-item">
-            <div class="main-nav-item-scene3d">
-              <div class="main-nav-item-one">Nos séjours</div>
-              <div class="main-nav-item-two">
-                <a href="#" class="main-nav-link" title="Séjours">Nos séjours</a>
-              </div>
-            </div>
+      <nav id="header-nav" class="column">
+        <ul class="layout-row justify-end align-center">
+          <li class="header-nav-item">
+            <a href="#" class="header-nav-link" title="Mon compte">Mon compte</a>
           </li>
-
-          <li class="main-nav-item">
-            <div class="main-nav-item-scene3d">
-              <div class="main-nav-item-one">Nos circuits</div>
-              <div class="main-nav-item-two">
-                <a href="#" class="main-nav-link" title="Circuits">Nos circuits</a>
-              </div>
-            </div>
+          <li class="header-nav-item">
+            <a href="#" class="header-nav-link" title="Newsletter">Newsletter</a>
           </li>
-
-          <li class="main-nav-item">
-            <div class="main-nav-item-scene3d">
-              <div class="main-nav-item-one">Bons plans</div>
-              <div class="main-nav-item-two">
-                <a href="#" class="main-nav-link" title="Réservations">Bons plans</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="main-nav-item">
-            <div class="main-nav-item-scene3d">
-              <div class="main-nav-item-one">Notre agence</div>
-              <div class="main-nav-item-two">
-                <a href="#" class="main-nav-link" title="Notre agence">Notre agence</a>
-              </div>
-            </div>
-          </li>
-          <li class="main-nav-item">
-            <div class="main-nav-item-scene3d">
-              <div class="main-nav-item-one">Créez votre voyage sur-mesure</div>
-              <div class="main-nav-item-two">
-                <a href="#" class="main-nav-link" title="Créez votre voyage"
-                  >Créez votre voyage sur-mesure</a
-                >
-              </div>
-            </div>
+          <li class="header-nav-item">
+            <a href="#" class="header-nav-link header-nav-link-coordinates" title="Téléphonez-nous">
+              <span>05.55.00.00.00</span>
+              <span>Du lundi au samedi, de 9h à 21h</span>
+            </a>
           </li>
         </ul>
       </nav>
-      <!-- eof .main-nav -->
-    </header>
-    <!-- eof .header -->
+      <!-- eof header-nav -->
+    </div>
+    <!-- eof .row -->
 
-    <section class="section-search">
-      <form action="#" method="POST" class="search-form">
-        <fieldset class="search-form-fieldset">
-          <legend class="search-form-legend">Trouvez votre séjour</legend>
+    <button class="js-main-nav-button main-nav-button button">Menu</button>
 
-          <p class="search-form-item">
-            <label class="search-form-label" for="search-destination">Destination</label>
-            <input
-              class="search-form-input"
-              type="text"
-              name="search-destination"
-              id="search-destination"
-              required
-              placeholder="Saisissez votre destination (pays, région, ville)..."
-            />
-          </p>
-          <p class="search-form-item">
-            <label class="search-form-label" for="search-start">Date de départ</label>
-            <input
-              class="search-form-input"
-              type="date"
-              name="search-start"
-              id="search-start"
-              required
-            />
-          </p>
-          <p class="search-form-item">
-            <label class="search-form-label" for="search-end">Date de retour</label>
-            <input
-              class="search-form-input"
-              type="date"
-              name="search-end"
-              id="search-end"
-              required
-            />
-          </p>
-          <p class="search-form-item">
-            <label class="search-form-label" for="search-adultes">Adultes : </label>
-            <select class="search-form-input" name="search-adultes" id="search-adultes" required>
-              <option value="">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </p>
-          <p class="search-form-item">
-            <label class="search-form-label" for="search-enfants">Enfants : </label>
-            <select class="search-form-input" name="search-enfants" id="search-enfants" required>
-              <option value="">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </p>
-          <p class="search-form-item">
-            <input class="search-form-submit button" type="submit" value="Rechercher" />
-          </p>
-        </fieldset>
-      </form>
-    </section>
-    <!-- eof .section-search -->
+    <nav id="main-nav">
+      <button class="js-main-nav-button main-nav-button button">Fermer</button>
+      <ul class="layout-row nowrap">
+        <li class="main-nav-item">
+          <div class="main-nav-item-scene3d">
+            <div class="main-nav-item-one">Nos séjours</div>
+            <div class="main-nav-item-two">
+              <a href="#" class="main-nav-link" title="Séjours">Nos séjours</a>
+            </div>
+          </div>
+        </li>
 
-    <section class="section-tips">
-      <div class="row">
-        <h2>Bons plans</h2>
+        <li class="main-nav-item">
+          <div class="main-nav-item-scene3d">
+            <div class="main-nav-item-one">Nos circuits</div>
+            <div class="main-nav-item-two">
+              <a href="#" class="main-nav-link" title="Circuits">Nos circuits</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="main-nav-item">
+          <div class="main-nav-item-scene3d">
+            <div class="main-nav-item-one">Bons plans</div>
+            <div class="main-nav-item-two">
+              <a href="#" class="main-nav-link" title="Réservations">Bons plans</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="main-nav-item">
+          <div class="main-nav-item-scene3d">
+            <div class="main-nav-item-one">Notre agence</div>
+            <div class="main-nav-item-two">
+              <a href="#" class="main-nav-link" title="Notre agence">Notre agence</a>
+            </div>
+          </div>
+        </li>
+        <li class="main-nav-item">
+          <div class="main-nav-item-scene3d">
+            <div class="main-nav-item-one">Créez votre voyage sur-mesure</div>
+            <div class="main-nav-item-two">
+              <a href="#" class="main-nav-link" title="Créez votre voyage">Créez votre voyage sur-mesure</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- eof .main-nav -->
+  </header>
+  <!-- eof .header -->
+
+  <section class="section-search">
+    <form action="#" method="POST" class="search-form">
+      <fieldset class="search-form-fieldset">
+        <legend class="search-form-legend">Trouvez votre séjour</legend>
+
+        <p class="search-form-item">
+          <label class="search-form-label" for="search-destination">Destination</label>
+          <input class="search-form-input" type="text" name="search-destination" id="search-destination" required
+            placeholder="Saisissez votre destination (pays, région, ville)..." />
+        </p>
+        <p class="search-form-item">
+          <label class="search-form-label" for="search-start">Date de départ</label>
+          <input class="search-form-input" type="date" name="search-start" id="search-start" required />
+        </p>
+        <p class="search-form-item">
+          <label class="search-form-label" for="search-end">Date de retour</label>
+          <input class="search-form-input" type="date" name="search-end" id="search-end" required />
+        </p>
+        <p class="search-form-item">
+          <label class="search-form-label" for="search-adultes">Adultes : </label>
+          <select class="search-form-input" name="search-adultes" id="search-adultes" required>
+            <option value="">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </p>
+        <p class="search-form-item">
+          <label class="search-form-label" for="search-enfants">Enfants : </label>
+          <select class="search-form-input" name="search-enfants" id="search-enfants" required>
+            <option value="">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </p>
+        <p class="search-form-item">
+          <input class="search-form-submit button" type="submit" value="Rechercher" />
+        </p>
+      </fieldset>
+    </form>
+  </section>
+  <!-- eof .section-search -->
+
+  <section class="section-tips">
+    <div class="layout-row">
+      <h2>Bons plans</h2>
+    </div>
+
+    <div class="layout-row">
+      <div class="tips-col tips-col-big">
+        <div class="tips-item">
+          <div class="tips-item-front">
+            <img class="tips-img animation" alt="" src="assets/images/vignettes/thailande.jpg" />
+            <div class="tips-metas">
+              <p class="tips-metas-title">
+                <span>Séjour</span>
+                Thaïlande
+              </p>
+              <p class="tips-metas-price">
+                <span>A partir de</span>
+                850€
+              </p>
+            </div>
+          </div>
+          <!-- eof .tips-metas -->
+          <div class="tips-item-back">
+            <a class="tips-link" href="#">
+              <span>Découvrir l'offre</span>
+            </a>
+          </div>
+        </div>
+        <!-- eof .tips-item -->
       </div>
-
-      <div class="row">
-        <div class="tips-col tips-col-big">
-          <div class="tips-item">
-            <div class="tips-item-front">
-              <img class="tips-img animation" alt="" src="assets/images/vignettes/thailande.jpg" />
-              <div class="tips-metas">
-                <p class="tips-metas-title">
-                  <span>Séjour</span>
-                  Thaïlande
-                </p>
-                <p class="tips-metas-price">
-                  <span>A partir de</span>
-                  850€
-                </p>
-              </div>
+      <!-- eof .tips-col -->
+      <div class="tips-col tips-col-big">
+        <div class="tips-item">
+          <div class="tips-item-front">
+            <img class="tips-img" alt="" src="assets/images/vignettes/canaries.jpg" />
+            <div class="tips-metas">
+              <p class="tips-metas-title">
+                <span>Séjour</span>
+                Îles Canaries
+              </p>
+              <p class="tips-metas-price">
+                <span>A partir de</span>
+                850€
+              </p>
             </div>
             <!-- eof .tips-metas -->
-            <div class="tips-item-back">
-              <a class="tips-link" href="#">
-                <span>Découvrir l'offre</span>
-              </a>
-            </div>
           </div>
-          <!-- eof .tips-item -->
-        </div>
-        <!-- eof .tips-col -->
-        <div class="tips-col tips-col-big">
-          <div class="tips-item">
-            <div class="tips-item-front">
-              <img class="tips-img" alt="" src="assets/images/vignettes/canaries.jpg" />
-              <div class="tips-metas">
-                <p class="tips-metas-title">
-                  <span>Séjour</span>
-                  Îles Canaries
-                </p>
-                <p class="tips-metas-price">
-                  <span>A partir de</span>
-                  850€
-                </p>
-              </div>
-              <!-- eof .tips-metas -->
-            </div>
-            <div class="tips-item-back">
-              <a class="tips-link" href="#">
-                <span>Découvrir l'offre</span>
-              </a>
-            </div>
+          <div class="tips-item-back">
+            <a class="tips-link" href="#">
+              <span>Découvrir l'offre</span>
+            </a>
           </div>
-          <!-- eof .tips-item -->
         </div>
-        <!-- eof .tips-col -->
-        <div class="tips-col">
-          <div class="tips-item">
-            <div class="tips-item-front">
-              <img class="tips-img" alt="" src="assets/images/vignettes/grece.jpg" />
-              <div class="tips-metas">
-                <p class="tips-metas-title">
-                  <span>Circuit</span>
-                  Grèce
-                </p>
-                <p class="tips-metas-price">
-                  <span>A partir de</span>
-                  850€
-                </p>
-              </div>
-            </div>
-            <!-- eof .tips-metas -->
-            <div class="tips-item-back">
-              <a class="tips-link" href="#">
-                <span>Découvrir l'offre</span>
-              </a>
-            </div>
-          </div>
-          <!-- eof .tips-item -->
-        </div>
-        <!-- eof .tips-col -->
-        <div class="tips-col">
-          <div class="tips-item">
-            <div class="tips-item-front">
-              <img class="tips-img" alt="" src="assets/images/vignettes/canada.jpg" />
-              <div class="tips-metas">
-                <p class="tips-metas-title">
-                  <span>Circuit</span>
-                  Canada
-                </p>
-                <p class="tips-metas-price">
-                  <span>A partir de</span>
-                  850€
-                </p>
-              </div>
-            </div>
-            <!-- eof .tips-metas -->
-            <div class="tips-item-back">
-              <a class="tips-link" href="#">
-                <span>Découvrir l'offre</span>
-              </a>
-            </div>
-          </div>
-          <!-- eof .tips-item -->
-        </div>
-        <!-- eof .tips-col -->
-        <div class="tips-col">
-          <div class="tips-item">
-            <div class="tips-item-front">
-              <img class="tips-img" alt="" src="assets/images/vignettes/chine.jpg" />
-              <div class="tips-metas">
-                <p class="tips-metas-title">
-                  <span>Circuit</span>
-                  Chine
-                </p>
-                <p class="tips-metas-price">
-                  <span>A partir de</span>
-                  1850€
-                </p>
-              </div>
-            </div>
-            <!-- eof .tips-metas -->
-            <div class="tips-item-back">
-              <a class="tips-link" href="#">
-                <span>Découvrir l'offre</span>
-              </a>
-            </div>
-          </div>
-          <!-- eof .tips-item -->
-        </div>
-        <!-- eof .tips-col -->
+        <!-- eof .tips-item -->
       </div>
-      <!-- eof .row -->
-
-      <div class="row">
-        <a class="section-tips-link button" href="#" title="Tous les bons plans"
-          >Tous les bons plans</a
-        >
+      <!-- eof .tips-col -->
+      <div class="tips-col">
+        <div class="tips-item">
+          <div class="tips-item-front">
+            <img class="tips-img" alt="" src="assets/images/vignettes/grece.jpg" />
+            <div class="tips-metas">
+              <p class="tips-metas-title">
+                <span>Circuit</span>
+                Grèce
+              </p>
+              <p class="tips-metas-price">
+                <span>A partir de</span>
+                850€
+              </p>
+            </div>
+          </div>
+          <!-- eof .tips-metas -->
+          <div class="tips-item-back">
+            <a class="tips-link" href="#">
+              <span>Découvrir l'offre</span>
+            </a>
+          </div>
+        </div>
+        <!-- eof .tips-item -->
       </div>
-    </section>
-    <!-- eof .section-tips -->
+      <!-- eof .tips-col -->
+      <div class="tips-col">
+        <div class="tips-item">
+          <div class="tips-item-front">
+            <img class="tips-img" alt="" src="assets/images/vignettes/canada.jpg" />
+            <div class="tips-metas">
+              <p class="tips-metas-title">
+                <span>Circuit</span>
+                Canada
+              </p>
+              <p class="tips-metas-price">
+                <span>A partir de</span>
+                850€
+              </p>
+            </div>
+          </div>
+          <!-- eof .tips-metas -->
+          <div class="tips-item-back">
+            <a class="tips-link" href="#">
+              <span>Découvrir l'offre</span>
+            </a>
+          </div>
+        </div>
+        <!-- eof .tips-item -->
+      </div>
+      <!-- eof .tips-col -->
+      <div class="tips-col">
+        <div class="tips-item">
+          <div class="tips-item-front">
+            <img class="tips-img" alt="" src="assets/images/vignettes/chine.jpg" />
+            <div class="tips-metas">
+              <p class="tips-metas-title">
+                <span>Circuit</span>
+                Chine
+              </p>
+              <p class="tips-metas-price">
+                <span>A partir de</span>
+                1850€
+              </p>
+            </div>
+          </div>
+          <!-- eof .tips-metas -->
+          <div class="tips-item-back">
+            <a class="tips-link" href="#">
+              <span>Découvrir l'offre</span>
+            </a>
+          </div>
+        </div>
+        <!-- eof .tips-item -->
+      </div>
+      <!-- eof .tips-col -->
+    </div>
+    <!-- eof .row -->
 
-    <aside class="aside-newsletter">
-      <form action="#" method="POST" class="row">
-        <fieldset class="newsletter-form-fieldset">
-          <legend class="newsletter-form-legend">Newsletter</legend>
-          <p class="newsletter-form-excerpt">
-            <strong>Inscrivez-vous</strong> et <strong>recevez</strong> nos
-            <strong>nouveautés</strong> et <strong>offres spéciales</strong> !
+    <div class="layout-row">
+      <a class="section-tips-link button" href="#" title="Tous les bons plans">Tous les bons plans</a>
+    </div>
+  </section>
+  <!-- eof .section-tips -->
+
+  <aside class="aside-newsletter">
+    <form action="#" method="POST" class="layout-row">
+      <fieldset class="newsletter-form-fieldset">
+        <legend class="newsletter-form-legend">Newsletter</legend>
+        <p class="newsletter-form-excerpt">
+          <strong>Inscrivez-vous</strong> et <strong>recevez</strong> nos
+          <strong>nouveautés</strong> et <strong>offres spéciales</strong> !
+        </p>
+        <p class="newsletter-form-item">
+          <label class="newsletter-form-label" for="newsletter-email">E-mail</label>
+          <input class="newsletter-form-input" type="email" name="newsletter-destination" id="newsletter-email" required
+            placeholder="Saisissez votre e-mail" />
+          <input class="newsletter-form-submit button" type="submit" value="M'inscrire" />
+        </p>
+      </fieldset>
+    </form>
+  </aside>
+
+  <section class="section-ideas">
+    <div class="layout-row">
+      <div class="ideas">
+        <h2>Nos idées voyage</h2>
+
+        <div class="layout-row wrap">
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/tout-compris.jpeg" alt="" />
+              <span class="ideas-item-title">Séjours tout compris</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/bienetre.jpeg" alt="" />
+              <span class="ideas-item-title">Bien-être</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/gastronomie.jpeg" alt="" />
+              <span class="ideas-item-title">Gastronomie</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/plages.jpeg" alt="" />
+              <span class="ideas-item-title">Plages de rêve</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/montagnes.jpeg" alt="" />
+              <span class="ideas-item-title">Grands espaces</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/chateaux.jpeg" alt="" />
+              <span class="ideas-item-title">Chateaux</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/derniere-minute.jpeg" alt="" />
+              <span class="ideas-item-title">Dernière minute</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/citadins.jpeg" alt="" />
+              <span class="ideas-item-title">Citadins</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+          <div class="ideas-col">
+            <a href="#" title="" class="ideas-item">
+              <img class="ideas-img" src="assets/images/ideas/sportifs.jpeg" alt="" />
+              <span class="ideas-item-title">Sportifs</span>
+            </a>
+          </div>
+          <!-- eof ideas-col -->
+        </div>
+        <!--eof .row -->
+      </div>
+      <!--eof .ideas -->
+
+      <div class="tops">
+        <h2>Top destinations</h2>
+        <ul class="tops-list">
+          <li class="tops-item">
+            <a class="tops-link" href="#" title="Voir les offres pour le Japon">Japon</a>
+            <span class="tops-price">550€</span>
+          </li>
+          <li class="tops-item">
+            <a class="tops-link" href="#" title="Voir les offres pour les Canaries">Canaries</a>
+            <span class="tops-price">310€</span>
+          </li>
+          <li class="tops-item">
+            <a class="tops-link" href="#" title="Voir les offres pour la Grèce">Grèce</a>
+            <span class="tops-price">440€</span>
+          </li>
+          <li class="tops-item">
+            <a class="tops-link" href="#" title="Voir les offres pour la Laponie">Laponie</a>
+            <span class="tops-price">1600€</span>
+          </li>
+          <li class="tops-item">
+            <a class="tops-link" href="#" title="Voir les offres pour la Laponie">Mexique</a>
+            <span class="tops-price">1200€</span>
+          </li>
+        </ul>
+        <p class="tops-legend">*Prix TTC à partir de</p>
+      </div>
+      <!-- eof .tops -->
+    </div>
+    <!-- eof .row -->
+  </section>
+  <!-- eof .section-circuits -->
+
+  <!-- Section Devis / Avec Bootstrap -->
+  <section id="devis" class="bootstrap-area form_UE_L221 py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Devis</h2>
+
+      <div class="row align-items-center g-5">
+        <!-- Colonne gauche : texte + bouton vidéo -->
+        <div class="col-lg-5 text-white d-flex flex-column justify-content-center">
+          <p class="lead mb-4 text-white fw-bold fs-3">
+            Envie d'ailleurs ? Laissez-nous vos coordonnées et un aperçu de vos envies.
+            Nous vous répondrons dans les meilleurs délais.
           </p>
-          <p class="newsletter-form-item">
-            <label class="newsletter-form-label" for="newsletter-email">E-mail</label>
-            <input
-              class="newsletter-form-input"
-              type="email"
-              name="newsletter-destination"
-              id="newsletter-email"
-              required
-              placeholder="Saisissez votre e-mail"
-            />
-            <input class="newsletter-form-submit button" type="submit" value="M'inscrire" />
-          </p>
-        </fieldset>
-      </form>
-    </aside>
-
-    <section class="section-ideas">
-      <div class="row">
-        <div class="ideas">
-          <h2>Nos idées voyage</h2>
-
-          <div class="row wrap">
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/tout-compris.jpeg" alt="" />
-                <span class="ideas-item-title">Séjours tout compris</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/bienetre.jpeg" alt="" />
-                <span class="ideas-item-title">Bien-être</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/gastronomie.jpeg" alt="" />
-                <span class="ideas-item-title">Gastronomie</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/plages.jpeg" alt="" />
-                <span class="ideas-item-title">Plages de rêve</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/montagnes.jpeg" alt="" />
-                <span class="ideas-item-title">Grands espaces</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/chateaux.jpeg" alt="" />
-                <span class="ideas-item-title">Chateaux</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/derniere-minute.jpeg" alt="" />
-                <span class="ideas-item-title">Dernière minute</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/citadins.jpeg" alt="" />
-                <span class="ideas-item-title">Citadins</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-            <div class="ideas-col">
-              <a href="#" title="" class="ideas-item">
-                <img class="ideas-img" src="assets/images/ideas/sportifs.jpeg" alt="" />
-                <span class="ideas-item-title">Sportifs</span>
-              </a>
-            </div>
-            <!-- eof ideas-col -->
-          </div>
-          <!--eof .row -->
-        </div>
-        <!--eof .ideas -->
-
-        <div class="tops">
-          <h2>Top destinations</h2>
-          <ul class="tops-list">
-            <li class="tops-item">
-              <a class="tops-link" href="#" title="Voir les offres pour le Japon">Japon</a>
-              <span class="tops-price">550€</span>
-            </li>
-            <li class="tops-item">
-              <a class="tops-link" href="#" title="Voir les offres pour les Canaries">Canaries</a>
-              <span class="tops-price">310€</span>
-            </li>
-            <li class="tops-item">
-              <a class="tops-link" href="#" title="Voir les offres pour la Grèce">Grèce</a>
-              <span class="tops-price">440€</span>
-            </li>
-            <li class="tops-item">
-              <a class="tops-link" href="#" title="Voir les offres pour la Laponie">Laponie</a>
-              <span class="tops-price">1600€</span>
-            </li>
-            <li class="tops-item">
-              <a class="tops-link" href="#" title="Voir les offres pour la Laponie">Mexique</a>
-              <span class="tops-price">1200€</span>
-            </li>
-          </ul>
-          <p class="tops-legend">*Prix TTC à partir de</p>
-        </div>
-        <!-- eof .tops -->
+          <div id="devis-video" class="d-flex flex-column w-100"></div>
       </div>
-      <!-- eof .row -->
-    </section>
-    <!-- eof .section-circuits -->
 
-    <section class="form_UE_L211">
-      <h2>Devis</h2>
-      <div class="form221 row nowrap">
-        <div class="form_section_1">
-          <p>
-            Envie d'ailleurs ? Laissez-nous vos coordonnées et un aperçu de vos envies. Nous vous
-            répondrons dans les meilleurs délais.
-          </p>
-          <div id="devis-video"></div>
-        </div>
-      <form action="#" method="POST" class="form_211">
-        <fieldset id="devis-form-coordonnees">
-          <legend>Coordonnées</legend>
-          <div class="form-row row-2">
-            <div class="form-group">
-              <label for="devis-nom">Nom : *</label>
-              <input type="text" name="devis-nom" id="devis-nom" required />
-            </div>
-            <div class="form-group">
-              <label for="devis-prenom">Prénom : *</label>
-              <input type="text" name="devis-prenom" id="devis-prenom" required />
+        <!-- Colonne droite : formulaire -->
+        <div class="col-lg-7 w-50 mx-auto ">
+          <div class="card shadow-lg border-0 mx-auto">
+            <div class="card-body p-4 p-md-5 form_221 rounded">
+              <form action="#" method="POST">
+                <fieldset class="mb-4">
+                  <legend class="h4 text-center mb-4 fw-bold">Coordonnées</legend>
+
+                  <div class="row g-2 mb-2">
+                    <div class="col-md-6">
+                      <label for="devis-nom" class="form-label small">Nom *</label>
+                      <input type="text" class="form-control form-control-sm" id="devis-nom" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="devis-prenom" class="form-label small">Prénom *</label>
+                      <input type="text" class="form-control form-control-sm" id="devis-prenom" required>
+                    </div>
+                  </div>
+
+                  <div class="row g-2 mb-2">
+                    <div class="col-md-4">
+                      <label for="devis-email" class="form-label small">Email *</label>
+                      <input type="email" class="form-control form-control-sm" id="devis-email" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="devis-dob" class="form-label small">Date de naissance *</label>
+                      <input type="date" class="form-control form-control-sm" id="devis-dob" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="devis-telephone" class="form-label small">Téléphone</label>
+                      <input type="tel" class="form-control form-control-sm" id="devis-telephone">
+                    </div>
+                  </div>
+
+                  <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" id="devis-consentement-rgp" required>
+                    <label class="form-check-label small" for="devis-consentement-rgp">
+                      J'ai pris connaissance des <a href="#">CGV</a>.
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="mb-4">
+                  <legend class="h4 text-center mb-4 fw-bold">Voyage</legend>
+
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="devis-destination" class="form-label">Destination *</label>
+                      <select id="devis-destination" class="form-select" required>
+                        <option value="">-- Choisir une destination --</option>
+                        <option value="asie">Asie</option>
+                        <option value="europe">Europe</option>
+                        <option value="amerique-sud">Amérique du Sud</option>
+                        <option value="amerique-centre">Amérique centrale</option>
+                        <option value="amerique-nord">Amérique du Nord</option>
+                        <option value="oceanie">Océanie</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="devis-budget" class="form-label">Budget *</label>
+                      <input type="number" class="form-control" id="devis-budget" required>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="text-center">
+                  <button type="submit" id="devis-bouton-envoyer" class="btn btn-primary btn-lg rounded-pill px-5 mx-auto d-block">Envoyer</button>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="form-row row-3">
-            <div class="form-group">
-              <label for="devis-email">Email : *</label>
-              <input type="email" name="devis-email" id="devis-email" required />
-            </div>
-            <div class="form-group">
-              <label for="devis-dob">Date de naissance : *</label>
-              <input type="date" name="devis-dob" id="devis-dob" required />
-            </div>
-            <div class="form-group">
-              <label for="devis-telephone">Téléphone (optionnel) :</label>
-              <input type="tel" name="devis-telephone" id="devis-telephone" />
-            </div>
-          </div>
-          <div class="form-row row-1 consentement">
-            <input type="checkbox" name="devis-consentement-rgp" id="devis-consentement-rgp" value="1" required />
-            <label for="devis-consentement-rgp">
-              J'ai pris connaissance des <a href="#" target="_blank">CGV</a>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset id="form-voyage">
-          <legend>Voyage</legend>
-          <div class="form-row row-2">
-            <div class="form-group">
-              <label for="devis-destination">Destination *</label>
-              <select name="devis-destination" id="devis-destination">
-                <option value=""> -- Choisir une destination -- </option>
-                <option value="asie">Asie</option>
-                <option value="europe">Europe</option>
-                <option value="amerique-sud">Amérique du Sud</option>
-                <option value="amerique-centre">Amérique centrale</option>
-                <option value="amerique-nord">Amérique du Nord</option>
-                <option value="oceanie">Océanie</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="devis-budget">Budget *</label>
-              <input type="number" name="devis-budget" id="devis-budget" />
-            </div>
-          </div>
-        </fieldset>
-        <input type="submit" value="Envoyer" id="devis-bouton-envoyer"/>
-      </form>
-      </div>
-    </section>
-    <!-- eof .form_UE_L211 -->
-
-    <footer id="footer">
-      <div class="row">
-        <div class="prisme-conteneur">
-          <div class="footer-stats prisme">
-            <div class="footer-stats-item face un">
-              <div class="footer-stats-item-number">150</div>
-              <p class="footer-stats-item-title">Agences pour vous accompagner</p>
-            </div>
-            <div class="footer-stats-item face deux">
-              <div class="footer-stats-item-number">1 100</div>
-              <p class="footer-stats-item-title">Spécialistes à votre service</p>
-            </div>
-            <div class="footer-stats-item face trois">
-              <div class="footer-stats-item-number">8 000</div>
-              <p class="footer-stats-item-title">Séjours, circuits et locations</p>
-            </div>
-            <div class="footer-stats-item face quatre">
-              <div class="footer-stats-item-number">650 000</div>
-              <p class="footer-stats-item-title">Hôtels dans notre catalogue</p>
-            </div>
-            <div class="footer-stats-item face cinq">
-              <div class="footer-stats-item-number">200</div>
-              <p class="footer-stats-item-title">Compagnies aériennes partenaires</p>
-            </div>
-          </div>
-        </div>
-        <!-- eof .footer-stats -->
-
-        <div class="footer-social">
-          <p class="footer-social-title">Suivez-nous sur les réseaux sociaux</p>
-
-          <ul class="footer-social-list">
-            <li>
-              <a
-                class="footer-social-icon icon-facebook"
-                href="#"
-                target="_blank"
-                rel="nofollow"
-                title="Nous suivre sur Facebook"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                class="footer-social-icon icon-instagram"
-                href="#"
-                target="_blank"
-                rel="nofollow"
-                title="Nous suivre sur Instagram"
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                class="footer-social-icon icon-youtube"
-                href="#"
-                target="_blank"
-                rel="nofollow"
-                title="Nous suivre sur Youtube"
-              >
-                Youtube
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- eof .footer-social -->
-      </div>
-      <!-- eof .row -->
-    </footer>
-    <!-- eof #footer -->
-
-    <div class="footer-mentions">
-      <div class="footer-mentions-display-zone">
-        <div class="footer-mentions-message">
-          <strong>Séjours, circuits, week-ends :</strong> Prix TTC, à partir de, sous réserve de
-          disponibilité, base chambre double. — <strong>Vols :</strong> Prix TTC à partir de, sous
-          réserve de disponibilité, vol Aller/Retour ou Aller simple selon demande. Ces tarifs
-          n'incluent pas les frais de dossier. — <strong>Locations :</strong> prix par location pour
-          la durée totale du séjour. Ces tarifs n'incluent pas les frais de dossier. —
-          <strong>Hôtels :</strong> Prix TTC à partir de, par nuit, base chambre double.
         </div>
       </div>
     </div>
+  </section>
+  <!-- eof .section form -->
 
-    <script src="assets/libraries/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/form.js"></script>
-  </body>
+  <footer id="footer">
+    <div class="layout-row">
+      <div class="prisme-conteneur">
+        <div class="footer-stats prisme">
+          <div class="footer-stats-item face un">
+            <div class="footer-stats-item-number">150</div>
+            <p class="footer-stats-item-title">Agences pour vous accompagner</p>
+          </div>
+          <div class="footer-stats-item face deux">
+            <div class="footer-stats-item-number">1 100</div>
+            <p class="footer-stats-item-title">Spécialistes à votre service</p>
+          </div>
+          <div class="footer-stats-item face trois">
+            <div class="footer-stats-item-number">8 000</div>
+            <p class="footer-stats-item-title">Séjours, circuits et locations</p>
+          </div>
+          <div class="footer-stats-item face quatre">
+            <div class="footer-stats-item-number">650 000</div>
+            <p class="footer-stats-item-title">Hôtels dans notre catalogue</p>
+          </div>
+          <div class="footer-stats-item face cinq">
+            <div class="footer-stats-item-number">200</div>
+            <p class="footer-stats-item-title">Compagnies aériennes partenaires</p>
+          </div>
+        </div>
+      </div>
+      <!-- eof .footer-stats -->
+
+      <div class="footer-social">
+        <p class="footer-social-title">Suivez-nous sur les réseaux sociaux</p>
+
+        <ul class="footer-social-list">
+          <li>
+            <a class="footer-social-icon icon-facebook" href="#" target="_blank" rel="nofollow"
+              title="Nous suivre sur Facebook">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a class="footer-social-icon icon-instagram" href="#" target="_blank" rel="nofollow"
+              title="Nous suivre sur Instagram">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a class="footer-social-icon icon-youtube" href="#" target="_blank" rel="nofollow"
+              title="Nous suivre sur Youtube">
+              Youtube
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- eof .footer-social -->
+    </div>
+    <!-- eof .row -->
+  </footer>
+  <!-- eof #footer -->
+
+  <div class="footer-mentions">
+    <div class="footer-mentions-display-zone">
+      <div class="footer-mentions-message">
+        <strong>Séjours, circuits, week-ends :</strong> Prix TTC, à partir de, sous réserve de
+        disponibilité, base chambre double. — <strong>Vols :</strong> Prix TTC à partir de, sous
+        réserve de disponibilité, vol Aller/Retour ou Aller simple selon demande. Ces tarifs
+        n'incluent pas les frais de dossier. — <strong>Locations :</strong> prix par location pour
+        la durée totale du séjour. Ces tarifs n'incluent pas les frais de dossier. —
+        <strong>Hôtels :</strong> Prix TTC à partir de, par nuit, base chambre double.
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/libraries/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+
 </html>
