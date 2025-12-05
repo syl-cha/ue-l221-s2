@@ -7,12 +7,6 @@
   visibility: hidden;
 }
 
-#devis-video {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .devis-video-button {
   /* Transitions pour fade */
   opacity: 1; 
@@ -55,6 +49,10 @@
   margin-top: 1rem;
 }
 
+.video-placeholder:empty {
+  display: none;
+}
+
 .devis-video-player {
   height: 100%;
   width: auto;
@@ -77,7 +75,7 @@
 }
 
 /* Application sur tout le formulaire */
-.form_211 {
+.form_221 {
   position: relative;
   animation: formPulse 3s ease-in-out infinite;
 }
@@ -85,189 +83,52 @@
 /* Animation respiration */
 @keyframes formPulse {
   0% {
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.529);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.15);
   }
   50% {
-    box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.75);
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.25);
   }
   100% {
-    box-shadow: 0 0 0 0px rgba(242, 242, 242, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.15);
   }
 }
 
 /* Effet de focus sur les champs du formulaire */
-.form_211 input:focus,
-.form_211 select:focus {
+.form_UE_221 input:focus,
+.form_221 select:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 10px var(--primary-color);
+  border-color: var(--primary-color)!important;
+  box-shadow: 0 0 10px var(--primary-color)!important;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+.form_UE_L221 .form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.15rem rgba(116, 170, 83, 0.25) !important;
+  outline: none;
+}
 
 
 /* Style de la section DEVIS + Formulaire */
 
-.form_UE_L211 {
-  padding: 0 10rem 0 10rem;
+.form_UE_L221 {
   width: 100%;
-  min-height: 100vh;
   background-image: url("/assets/images/form.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 
-.form_UE_L211 h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-/* Carte du formulaire */
-.form_211 {
-  min-width: 620px;
-  max-width: 100%;
-  border-radius: 20px;
-  padding: 30px;
+.form_221 {
   background-color: var(--white-color);
-  box-sizing: border-box;
-  margin-bottom: 3rem;
-}
-
-.form221.row.nowrap {
-  gap: 5rem;
-  justify-content: space-between;
-}
-
-.form_section_1 {
-  align-content: center;
-}
-
-.form_UE_L211 p {
-  font-size: 25px;
-  color: var(--white-color);
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.form_UE_L211 form {
-  width: 100%;
-}
-
-.form_UE_L211 fieldset {
-  border-width: 0;
-  margin: 0 0 25px 0;
-  padding: 0;
-}
-
-.form_UE_L211 legend {
-  color: var(--black-color);
-  width: 100%;
-  display: flex;
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Colonnes du formulaire */
-
-.form-row {
-  display: grid;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.form-row.row-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.form-row.row-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* ligne simple (si besoin) */
-.form-row.row-1 {
-  grid-template-columns: 1fr;
-}
-
-/* GROUPES (label + input) */
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-
-.form_UE_L211 label {
-  font-size: 14px;
-  color: var(--black-color);
-  padding-left: 10px;
-}
-
-.form_UE_L211 input,
-.form_UE_L211 select {
-  width: 100%;
-  padding: 10px 16px;
-  border-radius: 25px;
-  outline: none;
-  border: 1.5px solid rgba(0, 0, 0, 0.51);
-  color: #000;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-/* Placeholder et valeur texte lisibles */
-.form_UE_L211 input::placeholder {
-  color: var(--black-color);
-}
-
-/* Checkbox */
-
-.form-row.consentement {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.form-row.consentement input[type="checkbox"] {
-  width: auto;
-  padding: 0;
-  border-radius: 4px;
-}
-
-.form-row.consentement label {
-  font-size: 14px;
-}
-
-.form-row.consentement a {
-  color: black;
-  text-decoration: underline;
-}
-
-.form-row.consentement a:hover {
-  color: var(--secondary-color);
 }
 
 /* Bouton Envoyer */
 
 #devis-bouton-envoyer {
-  display: block;
-  margin: 10px auto 0;
-  padding: 12px 40px;
-  border-radius: 30px;
-  border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
-  color: var(--white-color);
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  border: 2px solid var(--primary-color);
+  transition: transform 0.1s ease, background-color 0.2s ease;
 }
 
 #devis-bouton-envoyer:hover {
@@ -281,30 +142,29 @@
 }
 
 
-
 /* Animation de la case à cocher */
 
-.form-row.consentement input[type="checkbox"] {
-  margin-left: 0.5rem;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 1.5px solid rgba(0, 0, 0, 0.51);
-  border-radius: 6px;
-  cursor: pointer;
-  background: transparent;
-  position: relative;
-  transition: border-color .25s, background .25s;
+/* Mise en forme de la case Bootstrap */
+.form_UE_L221 .form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Animation complète : rebond + wiggle */
-.form-row.consentement input[type="checkbox"]:checked {
+.form_UE_L221 .form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  position: relative;
+}
+
+/* Animation + couleur quand c’est coché */
+.form_UE_L221 .form-check-input:checked {
   background: var(--primary-color);
   border-color: var(--primary-color);
   animation: bounceWiggle 0.45s ease-out;
 }
 
-/* Rebond + Wiggle en même temps */
+/* Rebond + wiggle */
 @keyframes bounceWiggle {
   0%   { transform: scale(1) rotate(0deg); }
   25%  { transform: scale(1.25) rotate(-10deg); }
@@ -313,22 +173,22 @@
   100% { transform: scale(1) rotate(0deg); }
 }
 
-/* Cocher : apparation douce */
-.form-row.consentement input[type="checkbox"]::after {
+/* Coche animée */
+.form_UE_L221 .form-check-input::after {
   content: "";
   position: absolute;
   left: 6px;
   top: 2px;
   width: 4px;
   height: 10px;
-  border: solid white;
+  border: solid var(--white-color);
   border-width: 0 2px 2px 0;
   opacity: 0;
   transform: rotate(45deg) scale(0.3);
   transition: all 0.25s ease;
 }
 
-.form-row.consentement input[type="checkbox"]:checked::after {
+.form_UE_L221 .form-check-input:checked::after {
   opacity: 1;
   transform: rotate(45deg) scale(1);
 }
