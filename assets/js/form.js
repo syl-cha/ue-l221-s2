@@ -2,6 +2,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // prêt à injecter du code dans le DOM
   const videoZoneElt = document.getElementById('devis-video');
   if (videoZoneElt) {
+
+    // bloc texte + vidéo (colonne gauche)
+    const leftBlock = videoZoneElt.closest('.devis-left-block');
+
     const btn1 = createButtonElt('Découvrez nos services');
     const btn2 = createButtonElt('Fermer la vidéo');
     btn2.classList.add('d-none'); // le bouton 2 n'est pas visible au départ (classe bootstrap)
@@ -11,8 +15,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     videoContainer.classList.add('video-placeholder');
 
     btn1.addEventListener('click', () => {
-      // recherche : dummy video links for web development
-      // source : https://gist.github.com/deepakpk009/99fd994da714996b296f11c3c371d5ee
       const videoUrl =
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
       const videoElt = document.createElement('video');
@@ -23,33 +25,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
       videoElt.classList.add('devis-video-player');
       videoContainer.appendChild(videoElt);
       requestAnimationFrame(() => {
-        videoElt.classList.add('d-block'); // classe bootstrap
+        videoElt.classList.add('d-block'); // classe bootstrap, déclenche l'animation CSS
       });
+
       toggleButton();
+
+      // on ajoute la classe qui anime le bloc texte/boutons
+      if (leftBlock) {
+        leftBlock.classList.add('video-open');
+      }
     });
 
     btn2.addEventListener('click', () => {
-    const videoElt = document.getElementById('devis-video-player');
+      const videoElt = document.getElementById('devis-video-player');
     
-        if (videoElt) {
-            videoElt.pause(); 
-            videoElt.classList.remove('d-block'); 
-            const TRANSITION_DURATION = 200;
-            // on attend que l'animation soit terminée avant de nettoyer et d'échanger les boutons
-            setTimeout(() => {
-                // Suppression de l'élément vidéo après fade
-                videoElt.remove(); 
-                toggleButton(); 
-            }, TRANSITION_DURATION);
+      if (videoElt) {
+        videoElt.pause();
+        videoElt.classList.remove('d-block');
+        // Suppression immédiate → le conteneur se vide, donc grâce à :empty il se ferme
+        videoElt.remove();
+      }
 
-        } else {
-            toggleButton();
-        }
+      if (leftBlock) {
+        leftBlock.classList.remove('video-open');
+      }
+
+      // on échange les boutons tout de suite
+      toggleButton();
     });
 
     function toggleButton() {
-      // toggle() ajoute la classe si elle est absente, et l'enlève si elle est présente
-      // source : https://developer.mozilla.org/fr/docs/Web/API/DOMTokenList/toggle
       btn1.classList.toggle('d-none');
       btn2.classList.toggle('d-none');
     }
