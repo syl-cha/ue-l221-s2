@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if (videoZoneElt) {
     const btn1 = createButtonElt('Découvrez nos services');
     const btn2 = createButtonElt('Fermer la vidéo');
-    btn2.classList.add('non-visible'); // le bouton 2 n'est pas visible au départ
+    btn2.classList.add('d-none'); // le bouton 2 n'est pas visible au départ
 
     // container pour insérer la vidéo
     const videoContainer = document.createElement('div');
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       videoElt.classList.add('devis-video-player');
       videoContainer.appendChild(videoElt);
       requestAnimationFrame(() => {
-        videoElt.classList.add('visible');
+        videoElt.classList.add('d-block');
       });
       toggleButton();
     });
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
         if (videoElt) {
             videoElt.pause(); 
-            videoElt.classList.remove('visible'); 
+            videoElt.classList.remove('d-block'); 
             const TRANSITION_DURATION = 200;
             // on attend que l'animation soit terminée avant de nettoyer et d'échanger les boutons
             setTimeout(() => {
@@ -50,8 +50,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function toggleButton() {
       // toggle() ajoute la classe si elle est absente, et l'enlève si elle est présente
       // source : https://developer.mozilla.org/fr/docs/Web/API/DOMTokenList/toggle
-      btn1.classList.toggle('non-visible');
-      btn2.classList.toggle('non-visible');
+      btn1.classList.toggle('d-none');
+      btn2.classList.toggle('d-none');
     }
 
     // insertion des éléments dans la zone réservée
