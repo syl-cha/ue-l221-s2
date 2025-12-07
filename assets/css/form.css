@@ -42,7 +42,11 @@
 }
 
 .video-placeholder:empty {
-  display: none;
+  /* display: none; */
+  display: flex; 
+  background-color: rgba(255, 255, 255, 0.1); /* Optionnel : pour visualiser la zone vide */
+  border: 1px dashed rgba(255, 255, 255, 0.3); /* Optionnel : bordure indicative */
+  border-radius: 1rem;
 }
 
 .devis-video-player {
