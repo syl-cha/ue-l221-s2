@@ -19,6 +19,14 @@
   visibility: visible;
 }
 
+/* Animation de disparition */
+.devis-video-player.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+  filter: blur(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+}
+
 .devis-video-button:before {
   display: inline-block;
   margin-right: 1rem;
@@ -32,6 +40,26 @@
   transform: scale(1.5);
 }
 
+/* Animation slide du texte et du bouton */
+.devis-left-block {
+  transform: translateY(0);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.devis-left-block.video-open {
+  transform: translateY(-40px);
+  opacity: 0.95;
+}
+
+#devis .col-lg-5 {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#devis .col-lg-5.video-open {
+  transform: translateY(-15px);
+  opacity: 0.95;
+}
+
 .video-placeholder {
   height: 300px;
   width: 100%;        
@@ -42,11 +70,7 @@
 }
 
 .video-placeholder:empty {
-  /* display: none; */
-  display: flex; 
-  background-color: rgba(255, 255, 255, 0.1); /* Optionnel : pour visualiser la zone vide */
-  border: 1px dashed rgba(255, 255, 255, 0.3); /* Optionnel : bordure indicative */
-  border-radius: 1rem;
+  display: none;
 }
 
 .devis-video-player {
@@ -60,7 +84,7 @@
   opacity: 0;
   transform: scale(0.85);
   filter: blur(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+  transition: opacity 1s ease, transform 1s ease, filter 1s ease;
 }
 
 /* quand on ajoute cette classe → l’animation se joue */
@@ -89,15 +113,6 @@
   }
 }
 
-/* Effet de focus sur les champs du formulaire */
-.form_UE_221 input:focus,
-.form_221 select:focus {
-  outline: none;
-  border-color: var(--primary-color)!important;
-  box-shadow: 0 0 10px var(--primary-color)!important;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
 .form_UE_L221 .form-control:focus {
   border-color: var(--primary-color) !important;
   box-shadow: 0 0 0 0.15rem rgba(116, 170, 83, 0.25) !important;
@@ -105,7 +120,6 @@
 }
 
 .form_UE_L221 {
-  width: 100%;
   background-image: url("/assets/images/form.jpg");
   background-size: cover;
   background-position: center;
@@ -138,11 +152,7 @@
 /* Animation de la case à cocher */
 
 /* Mise en forme de la case Bootstrap */
-.form_UE_L221 .form-check {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+
 
 .form_UE_L221 .form-check-input {
   width: 1.25em;
