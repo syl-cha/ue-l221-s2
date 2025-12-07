@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if (videoZoneElt) {
     const btn1 = createButtonElt('Découvrez nos services');
     const btn2 = createButtonElt('Fermer la vidéo');
-    btn2.classList.add('d-none'); // le bouton 2 n'est pas visible au départ
+    btn2.classList.add('d-none'); // le bouton 2 n'est pas visible au départ (classe bootstrap)
 
     // container pour insérer la vidéo
     const videoContainer = document.createElement('div');
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       videoElt.classList.add('devis-video-player');
       videoContainer.appendChild(videoElt);
       requestAnimationFrame(() => {
-        videoElt.classList.add('d-block');
+        videoElt.classList.add('d-block'); // classe bootstrap
       });
       toggleButton();
     });
